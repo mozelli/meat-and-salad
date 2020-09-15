@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 import Header from '../../components/Header';
 import saladImage from '../../assets/images/salad_image.png';
-//import OfferList from '../../components/OfferList';
+import OfferList from '../../components/OfferList';
 //import Social from '../../components/Social';
 import Footer from '../../components/Footer';
 
@@ -32,7 +32,7 @@ export default class Landing extends React.Component {
                         </p>
                     </section>
                     <section className="offer">
-                        {/*<OfferList />*/}
+                        <OfferList />
                     </section>
                     <section className="social">
                         {/*<Social />*/}
