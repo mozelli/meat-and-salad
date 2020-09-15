@@ -1,0 +1,80 @@
+#offer {
+}
+
+#offer header {
+    border-bottom: 2px solid var(--color-pink);
+    margin: 1.6rem;
+}
+
+#offer header h1 {
+    font: 600 1.4rem Poppins;
+    color: var(--color-orange-dark);
+}
+
+#offer article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 2px solid var(--color-pink);
+    margin: 0 1rem;
+    padding: 1rem 0;
+}
+
+#offer article footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#offer article footer button {
+    width: 100px;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: 0;
+    background-color: var(--color-orange-dark);
+    color: var(--color-light);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#offer article footer button:hover {
+    background-color: var(--color-pink);
+    color: var(--color-orange-dark);
+}
+
+#offer article footer p.price {
+    text-align: right;
+    color: var(--color-orange-dark);
+    font-size: 1.2rem;
+}
+
+#offer article footer p.price .de {
+    font-size: 0.8rem;
+}
+
+#offer article footer p.price .old-price {
+    text-decoration: line-through;
+}
+
+#offer article h2 {
+    font: 700 1rem Poppins;
+}
+
+#offer article .description {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#offer article .description img {
+    border: 1px solid var(--color-pink);
+    padding: 0.2rem;
+    max-width: 100px;
+}
+
+#offer article .description p {
+    text-align: justify;
+    font-size: 0.7rem;
+}
