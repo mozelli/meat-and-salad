@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import saladImage from '../../assets/images/salad_image.png';
 //import OfferList from '../../components/OfferList';
 //import Social from '../../components/Social';
-//import Footer from '../../components/Footer';
+import Footer from '../../components/Footer';
 
 export default class Landing extends React.Component {
     render() {
@@ -37,7 +37,7 @@ export default class Landing extends React.Component {
                     <section className="social">
                         {/*<Social />*/}
                     </section>
-                    {/*<Footer />*/}
+                    <Footer />
                 </main>
             </>
         )
