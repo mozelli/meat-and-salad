@@ -1,0 +1,66 @@
+#landing-page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+#landing-page section.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+#landing-page section.banner h2 {
+    font: 500 2.4rem Poppins;
+    color: var(--color-dark);
+    padding: 2rem 2rem;
+    text-align: center;
+    text-shadow: 2px 4px 9px var(--color-dark);
+}
+
+#landing-page section.banner p {
+    font: 500 1.3rem Poppins;
+    padding: 0 2.5rem;
+    padding-top: 2.5rem;
+    color: var(--color-orange-dark);
+}
+
+#landing-page section.banner img {
+    width: 60%;
+    padding: 1rem 0;
+}
+
+#landing-page section.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid var(--color-pink);
+    padding: 2rem 0;
+    margin: 0 2rem;
+}
+
+#landing-page section.cta a.comprar {
+    background-color: var(--color-orange);
+    width: 80%;
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--color-light);
+    font: 600 1rem Poppins;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+#landing-page section.cta a.comprar:hover {
+    background-color: var(--color-dark);
+}
+
+#landing-page section.cta p {
+    padding-top: 1.6rem;
+    text-align: center;
+    font: 500 0.8rem Poppins;
+    color: var(--color-dark);
+}
