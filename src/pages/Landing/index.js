@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
-//import Header from '../../components/Header';
+import Header from '../../components/Header';
 import saladImage from '../../assets/images/salad_image.png';
 //import OfferList from '../../components/OfferList';
 //import Social from '../../components/Social';
@@ -13,7 +13,7 @@ export default class Landing extends React.Component {
         return (
             <>
                 <main id="landing-page">
-                    {/*<Header />*/}
+                    <Header />
                     <section className="banner">
                         <h2>
                             Gostoso e saudável!
