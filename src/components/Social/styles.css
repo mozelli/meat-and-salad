@@ -1,0 +1,20 @@
+#social {
+    padding-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#social .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#social header h1 {
+    padding: 0 1.3rem;
+    font: 600 1.3rem Poppins;
+}
+
+#social .icons img {
+    width: 15%;
+}
