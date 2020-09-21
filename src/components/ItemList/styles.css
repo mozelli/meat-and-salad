@@ -1,0 +1,13 @@
+#item-list-component {
+    margin-bottom: 1.3rem;
+}
+
+#item-list-component fieldset {
+    border: 1px solid var(--color-orange);
+}
+
+#item-list-component fieldset legend{
+    font: 500 1.1rem Poppins;
+    padding: 0 0.5rem;
+
+}
