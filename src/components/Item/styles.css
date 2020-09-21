@@ -1,0 +1,18 @@
+#item-component {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+#item-component button.button-add-item {
+    border: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+#item-component button.button-add-item img {
+
+}
