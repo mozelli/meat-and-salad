@@ -2,6 +2,7 @@ import React from 'react';
 
 import './styles.css';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Modal from '../../components/Modal';
 import ItemList from '../../components/ItemList';
 import ImageSaladOrderForm from '../../assets/images/image_salad_order_form.jpg';
@@ -50,7 +51,7 @@ export default class OrderForm extends React.Component {
     }
 
     render() {
-        console.log(this.state.carnes);
+        let {itemsPlate} = this.state;
         return (
             <div id="order-form-page">
                 <Header />
@@ -62,14 +63,27 @@ export default class OrderForm extends React.Component {
                 <section className="categories">
                     {
                         this.items.map(item => {
-                            return <Modal key={item.name} category={item.name}><ItemList types={item.types} /></Modal>
+                            return (
+                                <Modal key={item.name} category={item.name}>
+                                    <ItemList types={item.types} functionAddItem={this.addItemPlate} />
+                                </Modal>
+                            )
                         })
                     }
                 </section>
                 <section className="choosed-items">
                     <h2>Itens escolhidos:</h2>
+                    <ul>
+                        {
+                            itemsPlate.map(item => {
+                                return <li>{item}</li>
+                            })
+
+                        }
+                    </ul>
 
                 </section>
+                <Footer />
             </div>
         );
     }

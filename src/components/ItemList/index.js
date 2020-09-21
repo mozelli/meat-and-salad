@@ -17,7 +17,7 @@ const ItemList = (props) => {
                   
                     {
                       type.list.map((item, index) => {
-                        return <Item key={index} item={item} />
+                        return <Item key={index} item={item} functionAddItem={props.functionAddItem} />
                       })
                     }
                   
