@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './styles.css';
-//import Item from '../Item';
+import Item from '../Item';
 
 const ItemList = (props) => {
 
@@ -14,13 +14,13 @@ const ItemList = (props) => {
                   <legend>
                     {type.name}
                   </legend>
-                  <ul>
+                  
                     {
                       type.list.map(item => {
-                        return <li key={item}>{item}</li> 
+                        return <Item item={item} />
                       })
                     }
-                  </ul>
+                  
                   
                 </fieldset>
               )
