@@ -7,11 +7,15 @@ import Modal from '../../components/Modal';
 import ItemList from '../../components/ItemList';
 import ImageSaladOrderForm from '../../assets/images/image_salad_order_form.jpg';
 
+import addIcon from '../../assets/images/icons/add_icon.svg';
+import removeIcon from '../../assets/images/icons/remove_icon.svg';
+
 
 export default class OrderForm extends React.Component {
 
     state = {
         itemsPlate: [],
+        iconList: addIcon
     };
 
     items = [
@@ -75,8 +79,8 @@ export default class OrderForm extends React.Component {
                     <h2>Itens escolhidos:</h2>
                     <ul>
                         {
-                            itemsPlate.map(item => {
-                                return <li>{item}</li>
+                            itemsPlate.map((item, index) => {
+                                return <li key={index}>{item}</li>
                             })
 
                         }
