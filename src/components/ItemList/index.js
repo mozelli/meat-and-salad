@@ -8,16 +8,16 @@ const ItemList = (props) => {
     return (
         <div id="item-list-component">
           {
-            props.types.map((type, index) => {
+            props.types.map(type => {
               return (
-                <fieldset key={index}>
+                <fieldset key={type.name}>
                   <legend>
                     {type.name}
                   </legend>
                   
                     {
-                      type.list.map(item => {
-                        return <Item item={item} />
+                      type.list.map((item, index) => {
+                        return <Item key={index} item={item} />
                       })
                     }
                   
