@@ -3,35 +3,34 @@ import React from 'react';
 import './styles.css';
 //import Item from '../Item';
 
-export default class ItemList extends React.Component {
-  constructor(props) {
-
-  }
-
-  render() {
+const ItemList = (props) => {
 
     return (
-      <>
         <div id="item-list-component">
-          {/*
-            options.map((option, index) => {
+          {
+            props.types.map((type, index) => {
               return (
                 <fieldset key={index}>
                   <legend>
-                    {option.legend}
+                    {type.name}
                   </legend>
-                  { option.arrayItems.map((item, index) => {
-                    return <Item key={ index } label={item.name} value={item.id} />
-                  }) }
+                  <ul>
+                    {
+                      type.list.map(item => {
+                        return <li key={item}>{item}</li> 
+                      })
+                    }
+                  </ul>
+                  
                 </fieldset>
               )
             })
-          */}
+          }
         </div>
-      </>
   );
   }
-}
+
+export default ItemList;
 
 
 /*
