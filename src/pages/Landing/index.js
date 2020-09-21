@@ -24,9 +24,9 @@ export default class Landing extends React.Component {
                         </p>
                     </section>
                     <section className="cta">
-                        {/*<Link to="/order-form" className="comprar">
+                        <Link to="/order-form" className="comprar">
                             Monte agora seu pedido!
-        </Link>*/}
+                        </Link>
                         <p>
                             Monte seu pedido da maneira que quiser. Escolha os itens e a quantidade de cada um.
                         </p>

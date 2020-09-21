@@ -1,0 +1,17 @@
+#order-form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+#order-form-page section.banner img {
+    width: 100%;
+}
+
+#order-form-page section.banner p.title {
+    margin: 1.6rem;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+}
