@@ -4,58 +4,60 @@ import './styles.css';
 
 export default class Modal extends React.Component {
     constructor(props) {
-        //super(props);
+        super(props);
 
         this.state = {
             modalVisibility: "none",
             stateModal: false
         }
+
+        this.toggleModal = this.toggleModal.bind(this);
+    }
+
+    toggleModal() {
+        let {stateModal} = this.state;
+
+        if (this.state.stateModal) {
+            this.setState({
+                modalVisibility: "none"
+            });
+            //setModalVisibility("none");
+        } else {
+            this.setState({
+                modalVisibility: "block"
+            });
+            //setModalVisibility("block");
+        }
+        this.setState({
+            stateModal: !stateModal
+        })
+        //setStateModal(!stateModal);
     }
     render() {
-
-        function toggleModal() {
-            let {stateModal} = this.state;
-
-            if (this.state.stateModal) {
-                this.setState({
-                    modalVisibility: "none"
-                });
-                //setModalVisibility("none");
-            } else {
-                this.setState({
-                    modalVisibility: "block"
-                });
-                //setModalVisibility("block");
-            }
-            this.setState({
-                stateModal: !stateModal
-            })
-            //setStateModal(!stateModal);
-        }
 
         return (
             <>
                 <div id="button">
-                    <button onClick={toggleModal}>{buttonLabel}</button>
+                    <button onClick={this.toggleModal}>{this.props.buttonLabel}</button>
                 </div>
 
-                <div id="modal" style={{ display: modalVisibility }}>
+                <div id="modal" style={{ display: this.state.modalVisibility }}>
                     <div className="content">
                         <header>
-                            <h1>{textHeader}</h1>
+                            <h1>{this.props.textHeader}</h1>
                             <span
                                 id="closeButton"
-                                onClick={toggleModal}
+                                onClick={this.toggleModal}
                             >
                                 &times;
                         </span>
                         </header>
                         <section className="body">
-                            {children}
+                            {this.props.children}
                         </section>
                         <footer>
                             <button
-                                onClick={toggleModal} >Fechar</button>
+                                onClick={this.toggleModal} >Fechar</button>
                         </footer>
                     </div>
                 </div>

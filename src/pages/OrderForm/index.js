@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 
 import './styles.css';
 import Header from '../../components/Header';
-//import Modal from '../../components/Modal';
+import Modal from '../../components/Modal';
 //import ItemList from '../../components/ItemList';
 import ImageSaladOrderForm from '../../assets/images/image_salad_order_form.jpg';
 
-/*interface ItemsProps {
-    category: string;
-    options: [];
-}*/
 
 export default class OrderForm extends React.Component {
     render() {
@@ -23,7 +19,12 @@ export default class OrderForm extends React.Component {
 
                     </section>
                     <section className="categories">
-
+                        <Modal buttonLabel="Carnes" textHeader="Carnes">
+                            Olá
+                        </Modal>
+                        <Modal buttonLabel="Vegetais" textHeader="Vegetais">
+                            Olá
+                        </Modal>
                     </section>
                     <section className="choosed-items">
                         <h2>Itens escolhidos:</h2>
