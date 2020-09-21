@@ -67,7 +67,7 @@ export default class Header extends React.Component {
                                         </Link>
                                 </li>
                                 <li>
-                                    <Link to="/">
+                                    <Link to="/order-form">
                                         Montar meu pedido
                                         </Link>
                                 </li>
