@@ -2,15 +2,20 @@ import React from 'react';
 
 import './styles.css';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import Modal from '../../components/Modal';
 import ItemList from '../../components/ItemList';
 import ImageSaladOrderForm from '../../assets/images/image_salad_order_form.jpg';
+
+import addIcon from '../../assets/images/icons/add_icon.svg';
+import removeIcon from '../../assets/images/icons/remove_icon.svg';
 
 
 export default class OrderForm extends React.Component {
 
     state = {
         itemsPlate: [],
+        iconList: addIcon
     };
 
     items = [
@@ -44,13 +49,21 @@ export default class OrderForm extends React.Component {
     addItemPlate = (item) => {
         const { itemsPlate } = this.state;
 
+        let itemExist = itemsPlate.filter(i => {
+            return i == item
+        });
+
+        if(itemExist) {
+            
+        }
+
         this.setState({
-            itemsPlate: [...itemsPlate, item]
+            itemsPlate: [...itemsPlate, item],
         });
     }
 
     render() {
-        console.log(this.state.carnes);
+        let {itemsPlate} = this.state;
         return (
             <div id="order-form-page">
                 <Header />
@@ -62,14 +75,27 @@ export default class OrderForm extends React.Component {
                 <section className="categories">
                     {
                         this.items.map(item => {
-                            return <Modal key={item.name} category={item.name}><ItemList types={item.types} /></Modal>
+                            return (
+                                <Modal key={item.name} category={item.name}>
+                                    <ItemList types={item.types} functionAddItem={this.addItemPlate} />
+                                </Modal>
+                            )
                         })
                     }
                 </section>
                 <section className="choosed-items">
                     <h2>Itens escolhidos:</h2>
+                    <ul>
+                        {
+                            itemsPlate.map((item, index) => {
+                                return <li key={index}>{item}</li>
+                            })
+
+                        }
+                    </ul>
 
                 </section>
+                <Footer />
             </div>
         );
     }

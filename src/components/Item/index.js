@@ -8,7 +8,11 @@ const Item = (props) =>  {
       <>
         <div id="item-component">
           <span className="">{props.item}</span>
-          <button className="button-add-item" value={props.item}>
+          <button 
+            className="button-add-item" 
+            value={props.item} 
+            onClick={() => props.functionAddItem(props.item)}
+          >
             <img src={addItemIcon} alt="Adicionar este item" />
           </button>
         </div>
